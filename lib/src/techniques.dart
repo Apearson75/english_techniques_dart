@@ -1,3 +1,5 @@
+import 'data/verbs.dart';
+
 class Techniques {
   bool simile(String quote) {
     bool isSimile = false;
@@ -8,5 +10,15 @@ class Techniques {
       isSimile = true;
     }
     return isSimile;
+  }
+
+  bool personification(String quote) {
+    bool isPerson = false;
+    verbs.forEach((element) {
+      if(quote.contains(element)){
+        isPerson = true;
+      }
+    });
+    return isPerson;
   }
 }

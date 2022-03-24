@@ -4,7 +4,7 @@ import 'package:english_techniques/english_techniques.dart';
 
 void main() {
   test('This will show a Author Paragraph', () {
-    print(ParaMaker().authorPara("John", "power", "Jack and the beanstalk", "It was as if it was a dream"));
+    print(ParaMaker().authorPara("John", "kindness", "Jack and the beanstalk", "The tree waved at him"));
   });
   test('This will show if it is a simile', () {
     print(Techniques().simile(""));
