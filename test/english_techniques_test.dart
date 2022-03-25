@@ -19,4 +19,9 @@ void main() {
       print(Generator().randomAdverb());
     }  
   });
+  test('Generates Random Personification', () {
+    for (var i = 1; i<=5; i++){
+      print(Generator().randomPersonification('bush', 'danced'));
+    }  
+  });
 }

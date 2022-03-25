@@ -2,6 +2,7 @@ import 'package:english_techniques/src/data/adverbs.dart';
 
 import 'data/adjectives.dart';
 import 'data/nouns.dart';
+import 'data/verbs.dart';
 import 'dart:math';
 
 class Generator {
@@ -27,6 +28,7 @@ class Generator {
         }
       return Sentance;  
     }
+
     String randomAdverb() {
       Random random = Random();
       int adjNum = random.nextInt(adjectivesMonosyllabicSafe.length);
@@ -35,5 +37,31 @@ class Generator {
       String adj = adjectivesMonosyllabicSafe[adjNum];
       String adverb = adverbs[advNum];
       return '$adverb $adj';
+    }
+
+    String randomPersonification([noun, verb]) {
+      Random random = Random();
+      int advNum = random.nextInt(adverbs.length);
+      
+      if (verb == null) {
+        int verbNum = random.nextInt(verbs.length);
+        verb = verbs[verbNum];
+      }
+      else if(verb == "") {
+        int verbNum = random.nextInt(verbs.length);
+        verb = verbs[verbNum];
+      }
+      
+      if(noun == null) {
+        int nounNum = random.nextInt(nouns.length);
+        noun = nouns[nounNum];
+      }
+      else if(noun == "") {
+        int nounNum = random.nextInt(nouns.length);
+        noun = nouns[nounNum];
+      }
+
+      String adverb = adverbs[advNum];
+      return 'The $noun $adverb $verb';
     }
 }
