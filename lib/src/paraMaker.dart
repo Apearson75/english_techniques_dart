@@ -18,6 +18,7 @@ class ParaMaker {
     
     final simile = Techniques().simile(quote);
     final personification = Techniques().personification(quote);
+    
     if(simile == true) { 
       shown = 'The use of a simile shows that';
       int randomSimileReason = random.nextInt(simileReasons.length);
