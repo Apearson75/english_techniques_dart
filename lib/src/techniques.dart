@@ -4,12 +4,16 @@ import 'data/onomatopoeia.dart';
 class Techniques {
   bool simile(String quote) {
     bool isSimile = false;
-    if(quote.contains("like")) {
-      isSimile = true;
-    }
-    else if (quote.contains('as')) {
-      isSimile = true;
-    }
+    List<String> words = quote.split(" ");
+
+    words.forEach((element) { 
+      if(element == "like") {
+        isSimile = true;
+      }
+      else if (element == 'as') {
+        isSimile = true;
+      }
+    });
     return isSimile;
   }
 
