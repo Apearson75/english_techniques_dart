@@ -6,8 +6,8 @@ void main() {
   test('This will show a Author Paragraph', () {
     print(ParaMaker().authorPara("John", "kindness", "Jack and the beanstalk", "The tree waved at him"));
   });
-  test('This will show if it is a simile', () {
-    print(Techniques().simile(""));
+  test('This will show if it is a onomatopoeia', () {
+    print(Techniques().onomato("SHABAM. Said the hero"));
   });
   test('This will print adjectives', () {
     for (var i = 1; i<=5; i++){  

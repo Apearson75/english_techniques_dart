@@ -1,4 +1,5 @@
 import 'data/verbs.dart';
+import 'data/onomatopoeia.dart';
 
 class Techniques {
   bool simile(String quote) {
@@ -20,5 +21,18 @@ class Techniques {
       }
     });
     return isPerson;
+  }
+
+  bool onomato(String quote) {
+    bool isOnomato = false;
+    quote = quote.toLowerCase();
+
+    onomatopoeia.forEach((element) { 
+      if(quote.contains(element)) {
+        isOnomato = true;
+      }
+    });
+
+    return isOnomato;
   }
 }
