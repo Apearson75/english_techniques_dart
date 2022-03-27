@@ -14,9 +14,9 @@ void main() {
       print(Generator().randomSimile("man"));
     }  
   });
-  test('Generate Random Adverbs and Adjectives', () {
+  test('Generate Random Simile', () {
     for (var i = 1; i<=5; i++){   
-      print(Generator().randomAdverb());
+      print(Generator().randomSimile('man'));
     }  
   });
   test('Generates Random Personification', () {
