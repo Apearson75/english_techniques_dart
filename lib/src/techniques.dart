@@ -39,4 +39,22 @@ class Techniques {
 
     return isOnomato;
   }
+
+  bool aliteration(String quote) {
+    bool isAliteration = false;
+    List<String> splitQuote = quote.split(' ');
+    for (int i = 0; i < splitQuote.length; i++) {
+      try {
+        String wordLetter = splitQuote[i].substring(0, 1);
+        String nextWordLetter = splitQuote[i + 1].substring(0, 1);
+        if (wordLetter == nextWordLetter) {
+          isAliteration = true;
+        }
+      }
+      catch(e){
+        
+      }
+    }
+    return isAliteration;
+  }
 }

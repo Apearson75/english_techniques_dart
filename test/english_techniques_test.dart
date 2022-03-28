@@ -24,4 +24,8 @@ void main() {
       print(Generator().randomPersonification('bush', 'danced'));
     }  
   });
+  test('Checks for Aliteration', () {
+    // Should print true
+    print(Techniques().aliteration('The relics rumbled in the dark'));
+  });
 }
