@@ -2,37 +2,36 @@ import 'data/verbs.dart';
 import 'data/onomatopoeia.dart';
 
 class Techniques {
-  bool simile(String quote) {
+  static bool simile(String quote) {
     bool isSimile = false;
     List<String> words = quote.split(" ");
 
-    words.forEach((element) { 
-      if(element == "like") {
+    words.forEach((element) {
+      if (element == "like") {
         isSimile = true;
-      }
-      else if (element == 'as') {
+      } else if (element == 'as') {
         isSimile = true;
       }
     });
     return isSimile;
   }
 
-  bool personification(String quote) {
+  static bool personification(String quote) {
     bool isPerson = false;
     verbs.forEach((element) {
-      if(quote.contains(element)){
+      if (quote.contains(element)) {
         isPerson = true;
       }
     });
     return isPerson;
   }
 
-  bool onomato(String quote) {
+  static bool onomato(String quote) {
     bool isOnomato = false;
     quote = quote.toLowerCase();
 
-    onomatopoeia.forEach((element) { 
-      if(quote.contains(element)) {
+    onomatopoeia.forEach((element) {
+      if (quote.contains(element)) {
         isOnomato = true;
       }
     });
@@ -40,7 +39,7 @@ class Techniques {
     return isOnomato;
   }
 
-  bool aliteration(String quote) {
+  static bool aliteration(String quote) {
     bool isAliteration = false;
     List<String> splitQuote = quote.split(' ');
     for (int i = 0; i < splitQuote.length; i++) {
@@ -50,10 +49,7 @@ class Techniques {
         if (wordLetter == nextWordLetter) {
           isAliteration = true;
         }
-      }
-      catch(e){
-        
-      }
+      } catch (e) {}
     }
     return isAliteration;
   }
