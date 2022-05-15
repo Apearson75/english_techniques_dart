@@ -48,4 +48,24 @@ class ParaMaker {
     String para = '$startPoint $evident $shown $reason $secondReason';
     return para;
   }
+
+  static String charPara(character, when, how, quote) {
+    Random random = Random();
+
+    String startPoint = "$character is presented in the $when as $how";
+    String evident = "This is evident in the quote '$quote'.";
+
+    final simile = Techniques.simile(quote);
+    final personification = Techniques.personification(quote);
+
+    String suggest = '';
+
+    if (simile == true) {
+      dynamic randomSimileReason = random.nextInt(simileCharReasons.length);
+      randomSimileReason = simileCharReasons[randomSimileReason];
+      suggest = 'The use of a simile suggests that $randomSimileReason.';
+    }
+    String para = "$startPoint $evident $suggest";
+    return para;
+  }
 }

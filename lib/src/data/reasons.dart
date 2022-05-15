@@ -5,6 +5,11 @@ const List<String> simileReasons = [
   'it can make the reader engage with the text.'
 ];
 
+const List<String> simileCharReasons = [
+  "is relatable",
+  "is being related to something",
+  "is being related to the theme"
+];
 
 const List<String> personReasons = [
   "the reader can relate with the quote as it has things a person could do.",
